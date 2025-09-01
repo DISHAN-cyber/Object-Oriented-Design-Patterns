@@ -4,23 +4,23 @@
  */
 package client;
 
-import model.proxyserver;
-import model.server;
-import model.user;
+import model.ProxyServer;
+import model.Server;
+import model.User;
 
 /**
  *
- * @author user
+ * @author Dilhara
  */
 public class Browser {
+
     public static void main(String[] args) {
-        server s = new server();
-        user user1 = new user("MATT","UK"); 
-        s.access(user1); 
-        
-        proxyserver ps = new proxyserver();
-        user user2 = new user("SHAN","LK"); 
-        ps.access(user2); 
+        Server s = new Server(); // real server
+        User user1 = new User("John", "UK"); // name, region
+        s.access(user1);
+//        
+        ProxyServer ps = new ProxyServer();
+        User user2 = new User("Sahan","LK"); // name, region
+        ps.access(user2);
     }
 }
-
